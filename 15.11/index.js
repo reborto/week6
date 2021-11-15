@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("online", connectionAlert);
   window.addEventListener("offline", connectionAlert);
 
-  const API = "https://jsonplaceholder.typicode.com/todos";
+  const API = "https://edgemony-backend.herokuapp.com/todos";
 
   fetch(API)
     .then((response) => response.json())
