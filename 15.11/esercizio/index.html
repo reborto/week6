@@ -8,28 +8,22 @@
     <title>Widget ToDo</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </head>
 
 <body>
     <main>
         <h1>widget todo</h1>
         <hr>
-        <div id="container">
-            <!---->
-        </div>
-
-        <div>
-        <ul>
-            <li>
-                <label><input type="checkbox">
-                    segnaposto
-                </label>
-            </li>
-        </ul>
-    </div>
+            <ul class="container">
+                <li>
+                    <label><input type="checkbox">
+                        segnaposto
+                    </label>
+                </li>
+            </ul>
+            <button id="add">Aggiungi</button>
     </main>
-
 </body>
 
 </html>
