@@ -2,11 +2,32 @@ import { API } from "./utils.js";
 import { List } from "./list.js";
 import { Add } from "./add.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  fetch(API)
-    .then((response) => response.json())
-    .then((data) => List(data));
+const loadList = () =>
+fetch("https://edgemony-backend.herokuapp.com/movie")
+  .then((response) => {
+    if (response.status===404){
+      console.error("errore!");
+      document.querySelector(".alert").classList.add("show");
 
-  const btn = document.querySelector("#add");
-  btn.addEventListener("click", Add);
+    }else{
+      return response.json();
+    }
+    })
+
+  .then((data) => List(data));
+
+document.addEventListener("DOMContentLoaded", loadList);
+
+window.addEventListener("hashchange", () => {
+  console.log("hash has changed", location.hash);
+
+  switch (location.hash) {
+    case "#add":
+      Add();
+      break;
+
+    case "":
+      loadList();
+      break;
+  }
 });

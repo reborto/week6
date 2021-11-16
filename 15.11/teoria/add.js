@@ -8,24 +8,30 @@ const Add = () => {
     `<div>
     <h3>Aggiungi una nuova scheda</h3>
     <form id="create">
+
       <div class="row">
         <label for="title">Titolo:</label>
         <input type="text" id="title" name="title" />
       </div>
+
       <div class="row">
         <label for="poster">Poster:</label>
         <input type="text" id="poster" name="poster" />
       </div>
+
       <div class="row">
         <label for="year">Anno:</label>
-        <input type="number" min="1900" value="2021" id="year" name="year" />
+        <input type="number" min="1900" value="${today.getFullYear()}" id="year" name="year" />
       </div>
+
       <div class="row">
         <label for="description">Descrizione:</label>
         <textarea id="description" name="description"></textarea>
       </div>
+
       <button>Salva scheda</button>
     </form>
+    <a href="#a" id="back">Torna alla home</a>
   </div>`
   );
 
@@ -40,7 +46,7 @@ const Add = () => {
       description: event.target.description.value,
     };
 
-    console.log(movie);
+    //console.log(movie);
 
     fetch(API, {
       method: "POST",
@@ -48,7 +54,9 @@ const Add = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(movie),
-    });
+    })
+    .then(response=>response.json())
+    .then((data)=>(location.hash=""));
   });
 };
 
