@@ -1,51 +1,101 @@
-body {
-    font-family: sans-serif;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,300;0,400;0,800;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,300;0,400;0,800;1,100;1,200&family=Road+Rage&display=swap');
+
   
+  h1{
+   color: dodgerblue;
+   /* font-family: 'Road Rage'; */
+   /* font-size: 90px; */
+  }
+  body {
+    font-family: 'Exo', sans-serif;
+    display: flex;
+  }
+  h3{
+    color: rgb(20, 113, 206);
+
+  }
   main {
     width: 85%;
     margin: 30px auto;
   }
   
   hr {
-    border: 0;
-    background-color: #ccc;
-    height: 1px;
+    border: 0px;
+    background-color:rgb(151, 199, 247);
+    height: 3px;
     margin: 20px 0;
+  }
+  footer hr{
+    margin: 200px 0px 0px;
   }
   
   footer {
     margin-top: 20px;
     text-align: center;
+    align-self: flex-end;
   }
   
-  #add {
+  #add, salva {
+    width: 25%;
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #aaa;
-    font-size: 16px;
-    transition: all 0.4s ease;
+    background-color: dodgerblue;
+    color: beige;
+    /* box-shadow: 5px 5px 15px #dedede; */
+    font-size: 14px;
+    text-align: center;
+    /* transition: all 0.4s ease; */
+
+
+    font-weight:300 ;
+    border-radius: 35px;
   }
-  
   #add:hover {
     cursor: pointer;
-    background-color: #00ced1;
+    background-color: rgb(20, 113, 206);
     color: white;
-    border-color: #00ced1;
+    box-shadow: 0 5px rgba(21, 132, 243, 25%); 
   }
+  #add:active{
+    background-color: 20, 113, 206e;
+    transform: translateY(4px);
+ 
+  }
+  #create{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 20px;
   
+
+  }
+
   #create label {
-    display: block;
+  
     width: 300px;
     font-size: 14px;
+    font-weight: 300;
+    padding-left: 15px;
   }
   
-  #create input,
-  #create textarea {
-    display: block;
+  #create input
+  {
     width: 100%;
-    padding: 4px;
+    padding: 5px 15px;
     font-size: 14px;
+    border-radius: 25px;
+  }
+  #create textarea{
+    width: 100%;
+    padding: 5px 0px 5px 20px;
+    font-size: 14px;
+    border-radius: 25px;
+    align-items: stretch;
+  }
+  #create textarea:focus {
+    border: 2px solid #00ced1;
+    box-shadow: 0px 0px 10px #00ced1;
   }
   
   #create input {
@@ -59,15 +109,29 @@ body {
     box-shadow: 0px 0px 10px #00ced1;
   }
   
-  #create textarea {
+  /* #create textarea {
     resize: vertical;
   }
-  
+   */
   #create .row {
     margin: 10px 0;
   }
+  #create .row2 {
+    margin: 10px 0;
+  }
+
+  ul{
+    list-style: none;
+    margin: 50px 0px;
+    padding: 0px;
+  }
+  ul li span {
+    text-decoration: underline;
+    cursor: pointer;
+    color: cyan;
+  }
   .alert{
-    background-color: crimson;
+    background-color: darkcyan;
     color: darksalmon;
     width: 400px;
     top: -500px;
@@ -94,13 +158,17 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
-  .delete{
-    border:0;
-    color: #fff;
-    background-color: brown;
-    border-radius: 35%;
-  }
+.edit .delete{
+  border: 0;
+  background-color: none;
+  cursor: pointer;
+}
 
+.edit:hover{
+  cursor: pointer;
+  transform: rotate(360deg) scale(2);
+}
+  
   .delete:hover{
     cursor: pointer;
     transform: rotate(360deg) scale(2);
