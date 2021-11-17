@@ -9,7 +9,7 @@ const Add = () => {
     `<div>
     <h3>Aggiungi una nuova scheda</h3>
     <form id="create">
-    <div class"rowSx">
+    <div class="rowSx">
       <div class="row">
         <label for="title">Titolo:</label>
         <input type="text" id="title" name="title" />
@@ -27,9 +27,12 @@ const Add = () => {
         <label for="description">Descrizione:</label>
         <textarea id="description" name="description"></textarea>
       </div>
+      <div class="btn">
       <button class="save">Salva scheda</button>
-    </form>
-    <a href="#" id="back">Torna alla home</a>
+      <button href="#" id="back">Torna alla home</button>
+      </div>
+      </form>
+    
   </div>`
   );
 

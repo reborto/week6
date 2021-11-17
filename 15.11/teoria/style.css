@@ -118,10 +118,29 @@
     border: 2px solid rgb(20, 113, 206);
     box-shadow: 0px 0px 10px rgba(21, 132, 243, 25%);
   }
-  #container .save{
+  .btn{
+    display: flex;
+  border: none;
+  margin: none;
+  padding: none;
+  }
+  #create .save{
     width: 50%;
     height:20% ;
-    padding: 10px;
+    /* padding: 10px; */
+    background-color: dodgerblue;
+    color: beige;
+    /* box-shadow: 5px 5px 15px #dedede; */
+    font-size: 14px;
+    text-align: center;
+    /* transition: all 0.4s ease; */
+    font-weight:300 ;
+    border-radius: 35px;
+  }
+  #create #back{
+    width: 50%;
+    height:20% ;
+    /* padding: 10px; */
     background-color: dodgerblue;
     color: beige;
     /* box-shadow: 5px 5px 15px #dedede; */
