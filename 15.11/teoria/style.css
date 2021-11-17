@@ -11,6 +11,10 @@
     font-family: 'Exo', sans-serif;
     display: flex;
   }
+  h2{
+    color: rgb(20, 113, 206);
+    font-weight: 100;
+  }
   h3{
     color: rgb(20, 113, 206);
 
@@ -19,7 +23,7 @@
     width: 85%;
     margin: 30px auto;
   }
-  
+
   hr {
     border: 0px;
     background-color:rgb(151, 199, 247);
@@ -31,12 +35,14 @@
   }
   
   footer {
+    font-weight: 300;
+    color: rgb(20, 113, 206);
     margin-top: 20px;
     text-align: center;
     align-self: flex-end;
   }
   
-  #add, salva {
+  #add {
     width: 25%;
     padding: 10px;
     background-color: dodgerblue;
@@ -52,14 +58,15 @@
   }
   #add:hover {
     cursor: pointer;
-    background-color: rgb(20, 113, 206);
+    border: 2px solid rgb(20, 113, 206);
+    box-shadow: 0px 0px 10px rgba(21, 132, 243, 25%);
     color: white;
-    box-shadow: 0 5px rgba(21, 132, 243, 25%); 
+    
   }
   #add:active{
-    background-color: 20, 113, 206e;
+    border: 2px solid rgb(20, 113, 206);
+    box-shadow: 0px 0px 10px rgba(21, 132, 243, 25%);
     transform: translateY(4px);
- 
   }
   #create{
     display: grid;
@@ -67,20 +74,15 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 60px;
     grid-row-gap: 20px;
-  
-
   }
 
-  #create label {
-  
+   #create label {
     width: 300px;
     font-size: 14px;
     font-weight: 300;
     padding-left: 15px;
-  }
-  
-  #create input
-  {
+  } 
+  #create input{
     width: 100%;
     padding: 5px 15px;
     font-size: 14px;
@@ -91,11 +93,19 @@
     padding: 5px 0px 5px 20px;
     font-size: 14px;
     border-radius: 25px;
+    
+
+  }
+  .row2{
+    display: grid;
+    
+    justify-items: stretch;
     align-items: stretch;
   }
+ 
   #create textarea:focus {
-    border: 2px solid #00ced1;
-    box-shadow: 0px 0px 10px #00ced1;
+    border: 2px solid rgb(20, 113, 206);
+    box-shadow: 0px 0px 10px rgba(21, 132, 243, 25%);
   }
   
   #create input {
@@ -105,8 +115,21 @@
   }
   
   #create input:focus {
-    border: 2px solid #00ced1;
-    box-shadow: 0px 0px 10px #00ced1;
+    border: 2px solid rgb(20, 113, 206);
+    box-shadow: 0px 0px 10px rgba(21, 132, 243, 25%);
+  }
+  #container .save{
+    width: 50%;
+    height:20% ;
+    padding: 10px;
+    background-color: dodgerblue;
+    color: beige;
+    /* box-shadow: 5px 5px 15px #dedede; */
+    font-size: 14px;
+    text-align: center;
+    /* transition: all 0.4s ease; */
+    font-weight:300 ;
+    border-radius: 35px;
   }
   
   /* #create textarea {

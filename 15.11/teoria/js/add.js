@@ -27,7 +27,7 @@ const Add = () => {
         <label for="description">Descrizione:</label>
         <textarea id="description" name="description"></textarea>
       </div>
-      <button class:"salva">Salva scheda</button>
+      <button class="save">Salva scheda</button>
     </form>
     <a href="#" id="back">Torna alla home</a>
   </div>`

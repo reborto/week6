@@ -4,7 +4,8 @@ const List = (data) => {
   const elements = data
     .map(
       (item) => `<li>
-      <a href="#view-${item.id}">${item.title}</a> - ${item.year}
+      <a href="#view-${item.id}">${item.title}</a> ${item.year}
+     
       <a class="edit" href="#edit-${item.id}">✍️</a>
       <button class="delete" id="${item.id}">🗑️</button>
       </li>`)
@@ -15,11 +16,10 @@ const List = (data) => {
   render(
     container,
     `
-    <p>Elenco schede film</p>
+    <h2>Elenco schede film</h2>
     <ul>${elements}</ul>
     <a href="#add" id="add">Aggiungi una nuova scheda</a>
     `
-
   );
 
   const btns = [...document.querySelectorAll('.delete')];
